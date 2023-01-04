@@ -1,0 +1,19 @@
+Notes:-
+1. React is library or framework ?
+2. Extensions :- 1.better comments
+		 2.Bracket color 
+		 3.git lense
+
+
+1.React cdn files inserted in html and will get react element 
+  in console we are getting acess of ReactDOM
+2.The CDN files are there for react web mobile version
+
+
+
+Home work: 
+1. Read about emmet ?
+2. What is CDN ?
+3. what is crossorigin ?
+4. differnece between async and defer
+ 

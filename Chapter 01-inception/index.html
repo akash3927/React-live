@@ -1,0 +1,75 @@
+<!-- @format -->
+
+<!-- Notes:-
+1. React is library or framework
+2. Extensions :- 1.better comments
+		 2.Bracket color 
+		 3.git lense
+
+
+1.React cdn files inserted in html and will get react element 
+  in console we are getting acess of ReactDOM
+2.The CDN files are there for react web mobile version
+
+
+
+Home work: 
+1. Read about emmet ?
+2. What is CDN ?
+3. what is crossorigin ?
+4. differnece between async and defer ?
+5 
+ -->
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="root"></div>
+		<!-- <h1>hello</h1> -->
+	</body>
+	<script
+		crossorigin
+		src="https://unpkg.com/react@18/umd/react.development.js"
+	></script>
+	<script
+		crossorigin
+		src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+	></script>
+	<script>
+		const heading1 = React.createElement(
+			'h1',
+			{
+				id: 'title',
+			},
+			'namaste everyone',
+		);
+		const heading2 = React.createElement(
+			'h2',
+			{
+				id: 'title',
+			},
+			'namaste everyone',
+		);
+		const container = React.createElement(
+			'div',
+			{
+				id: 'title',
+			},
+			[heading1, heading2],
+		);
+		// const heading2 = React.createElement('h2', {}, 'coll');
+		// const container = React.createElement('div', {}, 'namaste everyone');
+
+		// console.log(heading);
+		const root = ReactDOM.createRoot(document.getElementById('root'));
+
+		root.render(container);
+	</script>
+</html>
