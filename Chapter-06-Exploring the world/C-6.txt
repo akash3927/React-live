@@ -1,0 +1,23 @@
+
+Exploring the world
+Notes:-
+1.reconcillation => diff algorithm => 
+2.react makes faster dom manipulation and diff algo do this
+3.component updation can happen only with react state variables
+4.react keep ui in sync 
+5.industry concept=> Mivroservices=>
+-----
+6.where can we call the api in react?
+=>there are two ways to call api ?
+   I.load => API=> render
+   II.load =>render=> API =>ui update
+
+7. useEffect=>hook
+	two prameters = call back func and dependency array
+=> i) whenever component rerenders 
+   ii)dependency array => to render only specific time 
+	if not dependent will be called only once
+   iii)empty dependency array =>once after render
+   iv)dep array {searchText}=> once after initially + everytime after rerender(searchtxtchanges)
+8.whenever props and states change components get rerender
+9.

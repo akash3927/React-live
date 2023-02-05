@@ -1,0 +1,46 @@
+NOTES-
+
+
+1.Why component name should always start with capital letter ?
+=>if you don't put the capital letter then it will assume as html
+  tag, also the file name should be in the capital letter.
+2.how to export component ?
+=> 1.export default = why default ? = we can only export one thing
+   2.Named import=> using curly braces
+3.difference between 
+=> 	import Header from components/Header
+	import Header, { Title } from components/Header
+4.why config file ? 
+  =>only for the constants
+5.what is one Way data binding ? 
+  =>
+6.what is two way binding 
+  => where you are writing and reading together 
+  its two way binding	
+7..onchange function 
+  => will update the default value of input via event 
+  property i.e e.
+8.e.target.value ?
+  =>targets the value of input
+9.every component in react maintain a state 
+10.what is state ? 
+  => state where we locally store data like a variable
+11.what is hooks ? 
+  => it's normal function, and every hook has it's ownfunction 
+12.what is usesState ?
+  => i. it is use to create local state variable	
+     ii. how do u create local state variable ?
+	examples:-
+	a. const [searchTxt] = useState("kfc")
+	b. const [searchTxt, setSearchTxt] = useState("kfc")
+	c. const [searchClicked, setSearchClicked] = useState(False)
+	d. 	
+     iii.about "useState"
+	a. return a array
+	b. [variable name , function to update the variable]
+13.why do we need a state in a react ?
+   => if u have local variable but someone change that value but react
+      react will not know about that because its jsx so for that 
+      we are using state 
+14. Why react is so fast ?
+    =>Only rerender specific thing reconcillation.	 	

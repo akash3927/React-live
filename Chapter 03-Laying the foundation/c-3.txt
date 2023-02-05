@@ -1,0 +1,16 @@
+Notes:-
+1.pollyfill:- polyfill is use to convert newer version of code
+2.babel convert newer code to old 
+3.babel :- it is a javascript package
+           which convert one code to another code
+           
+4.npx == npm run
+5.babel-plugin-transform-remove-console console.logs remove 
+6..babelrc use to configure babel
+7. render means we are updating something in element in dom
+8.rerender means we are updating 
+9.react unique key and props => react doesnt understand inside element
+  content but it tracks key thats why it asks for unique Skey prop
+10.React.createElement is produces into object and then again react
+  it converts into Html(Dom)
+11.

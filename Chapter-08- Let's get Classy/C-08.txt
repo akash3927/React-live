@@ -1,0 +1,61 @@
+Notes:-
+1.Class Based Componet :-
+
+class Profile extends React.component {
+   render(){
+	return(
+	   <h1>Hello world</h1>
+    }
+  )
+}
+
+const Profile=()=>{
+	return(
+  <h1>hwllo</h1>	
+ )
+}
+
+
+2. props we are acessing in the class component by using this.props
+3. how to create state in class based component ?=>
+   in class component has constructor
+4.constructor is place used for initialization whenever class is invoked
+  constructor is called
+5.class Profile extends React.component {
+   constructor(props){
+       super(props)
+         this.state = {
+           count: 0
+	 }
+}
+   render(){
+	return(
+	   <h1>Hello world</h1>
+    }
+  )
+}
+
+6.we do not mutate state directly
+*react life cycle
+7.constructor then render  
+8.componenetdidmount =>this is the fucntion after render it will
+  get called 
+  sequence (constructor, render, componentdidmount)
+  we are making api calls in componentdidmount
+
+
+
+mounting
+render phase--constructor called, render called (fast phase)
+commit phase--react is modifying dom componentDidMount called (slow)
+
+
+
+1.first research question =>s
+why do we do super props ?
+what is constructor ?
+why do we write props ?	
+
+2.why can't i make useEffect async ?
+  and componentDidMount async ?
+   

@@ -1,0 +1,123 @@
+Notes :-
+//HMR --->hot module reload, it keeps the track a all the file which are updating
+//File watcher algorithm ---> return in c++ doing all reloading
+//bundling---> it is bundling all code which shows into dist folder
+//minify---> it is minifying code
+//cleaning code
+
+1.window by js engine 
+--->Bundlers, Vite, Parcel, Webpack, ==Alternatives
+--->npm install parcel
+---> "-D" devdependency
+--->
+
+Assignments:-
+# Theory Assignment:
+● - What is `NPM`?
+=> node package manager, it is use to manage package.json
+   react is powered by lot of things for that we need to manage so many
+   things
+
+
+● - What is `Parcel/Webpack`? Why do we need it?
+=> parcel and webpack are the bundlers used mostly for js ts code that 
+   parcel is a beast helps you to minify and clean and make your code compact
+
+● - What is `.parcel-cache`
+=> parcel-cache is the space where it does hmr, minification everything
+   file watching
+
+
+● - What is `npx` ?
+=> it is use to execution in js, parcel with entry point
+
+
+
+● - What is difference between `dependencies` vs `devDependencies`
+=>  dependencies are installed on both:
+
+	npm install from a directory that contains package.json
+        npm install $package on any other directory
+    devDependencies are:
+
+         also installed on npm install on a directory that contains package.json, unless you pass the --production flag (go upvote Gayan Charith's answer), or if the NODE_ENV=production environment variable is set
+          not installed on npm install "$package" on any other directory, unless you give it the --dev option.
+          are not installed transitively.
+
+
+● - What is Tree Shaking?
+=>
+
+● - What is Hot Module Replacement?
+=> hot module replacement is keeps the track of all the files which are
+  getting updated
+
+● - List down your favourite 5 superpowers of Parcel and describe any 3 of them in your
+own words.
+=>1.HMR
+  2.File Watching
+  3.Bundling
+  4.Minify
+  5.cleaning our code 
+  6.dev and production build
+  7.super fast build algorithm
+  8.Image optimisation
+  9.Caching while development
+  10.Compression of files
+  11.Compatble with older version of browser
+  12.https on dev
+  13.manages port number
+  14.consistent hashing algorithm 
+  15.zero config
+  16.Tree shaking - reomves unwanted code
+
+● - What is `.gitignore`? What should we add and not add into it?
+=> gitignore we use to hide our heavy load files and credentials into
+   gitignore file
+   anything which generates automatically on the server should be in
+   the gitignore
+
+
+● - What is the difference between `package.json` and `package-lock.json`
+=>  package.json is manages all the and its configuiration
+    
+
+● - Why should I not modify `package-lock.json`?
+=> package-lock.json is tells exact version of library it locks the version
+
+● - What is `node_modules` ? Is it a good idea to push that on git?
+=> it containg small small code which are reusable that are containing 
+   in node_modules
+
+
+● - What is the `dist` folder?
+=> dist folder keeps the file minified for us it creates development
+   build version and it host on server
+
+● - What is `browserlists`
+=>browserlist is used to browser version manage
+
+
+Read about dif bundlers: vite, webpack, parcel
+● Read about: ^ - caret and ~ - tilda
+=> caret = caret is used for upgrade our versions tilda = tilda is use
+ to upgrade the major version
+
+
+● Read about Script types in html (MDN Docs)
+# Project Assignment:
+- In your existing project
+● - intialize `npm` into your repo
+● - install `react` and `react-dom`
+● - remove CDN links of react
+● - install parcel
+● - ignite your app with parcel
+● - add scripts for “start” and “build” with parcel commands
+● - add `.gitignore` file
+● - add `browserlists`
+● - build a production version of your code using `parcel build`
+# References
+● Creating your own create-react-app
+● Parcel Documentation
+● Parcel on Production
+● BrowsersList: https://browserslist.dev/

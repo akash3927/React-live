@@ -1,0 +1,20 @@
+Notes:-
+1.Difference between redux and redux toolkit?
+2.redux store is big object eod , it has different section
+3.in redux we have single store for everything
+4.if we click on plus button which dispatch action 
+which call reducer function which update our slice store=>
+selector is use to read the data
+5.reduxjs/toolkit=>main function
+6.react-redux=>BRIDGE Between react & redux
+7.configureStore => reduxtoolkit
+8.const store = configurestore({
+  
+  
+})
+  export default store;
+
+
+9.provider is used from react-redux
+10.slice is created using createslice,it has name, initial state
+11.useselector is use to subscribe to the store

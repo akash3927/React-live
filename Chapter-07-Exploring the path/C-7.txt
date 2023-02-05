@@ -1,0 +1,4 @@
+1. never write variable in if else also in for loop
+   usestate should not be called in outside componenet
+2.we can create several useeffects 
+3.
