@@ -1,0 +1,8 @@
+1.Requirment qualification                     |			
+2.Features                                     |
+3.Tech stack-Redux,Tailwind CSS, justification | 5 mins discussion
+4.react-router-dom                             |
+5.bunder                                       |
+
+
+*Planning

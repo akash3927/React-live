@@ -1,0 +1,65 @@
+/** @format */
+body {
+	background-color: lightgoldenrodyellow;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px;
+	border: 1px solid black;
+	background-color: lightgoldenrodyellow;
+	color: brown;
+}
+
+.nav-items > ul {
+	list-style-type: none;
+	display: flex;
+}
+.nav-items > ul > li {
+	padding: 10px;
+	background-color: transparent;
+	color: brown;
+	font-weight: 900;
+}
+
+.logo {
+	width: 120px;
+}
+
+.card {
+	width: 250px;
+	height: 330px;
+	margin: 10px;
+	padding: 10px;
+}
+.card:hover {
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.card > img {
+	width: 100%;
+}
+.card > h2 {
+	margin: 0;
+	padding: 5px;
+	color: brown;
+}
+.card > h4 {
+	margin: 0;
+	padding: 5px;
+	color: brown;
+}
+.card > .card-specifications {
+	display: flex;
+	justify-content: space-between;
+	color: brown;
+}
+
+.restaurant-List {
+	width: 100%;
+	margin: auto;
+	display: grid;
+	justify-content: center;
+	grid-template-columns: 20% 20% 20% 20%;
+	gap: 30px;
+}

@@ -55,4 +55,6 @@ const container = React.createElement(
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+root.render(container);
+
 //passing a react element inside the root

@@ -1,0 +1,25 @@
+Notes:-
+Different types of testing 
+1.manual testing 
+2.automation testing 
+  -selenium
+  
+3.End 2 End testing -covers entire user journey
+4.Headless Browser -- is a kind of actual browser
+       but its doesnt show anything 
+5.Unit testing -
+6.Integration Testing-
+
+Jest:-
+1.install react testing library
+2.install jest
+3.configure jest
+4.jest.config (npx jest --init) why npx bcoz its only once
+5.test enviorment
+6.provider coverage -babel
+7.jest config.js is created
+8.npm run test
+9.jest enviorment -jsdom 
+10.create foler __tests__
+11.every test case expect something and we should get
+  something out of it 
