@@ -1,15 +1,20 @@
 /** @format */
 body {
-	background-color: lightgoldenrodyellow;
+	/* background-color: lightgoldenrodyellow; */
+	background-color: #f9faee;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+		'Lucida Sans', Arial, sans-serif;
 }
 
 .header {
 	display: flex;
 	justify-content: space-between;
-	margin: 10px;
-	border: 1px solid black;
-	background-color: lightgoldenrodyellow;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 15px 20px -20px;
+	background-color: #f9faee;
+	/* background-color: lightgoldenrodyellow; */
 	color: brown;
+	position: sticky;
+	top: 0;
 }
 
 .nav-items > ul {
@@ -25,6 +30,32 @@ body {
 
 .logo {
 	width: 120px;
+	margin-left: 80px;
+}
+.search-container {
+	display: flex;
+	justify-content: center;
+	margin: 20px;
+	padding: 20px;
+}
+.search-container > .search-input {
+	padding: 0.5rem 1rem;
+	font-size: 1.25rem;
+	border: none;
+	background: 0 0;
+	border-bottom: #2c5142 1px solid;
+	color: #2c5142;
+	padding-right: 2.5rem;
+	outline: none;
+}
+.search-container > .search-btn {
+	background-color: 0 0;
+	/* border: #2c5142 1px solid; */
+	color: #2c5142;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	border-bottom: #2c5142 1px solid;
 }
 
 .card {
@@ -34,7 +65,7 @@ body {
 	padding: 10px;
 }
 .card:hover {
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 10px;
 }
 .card > img {
 	width: 100%;
@@ -45,6 +76,7 @@ body {
 	color: brown;
 }
 .card > h4 {
+	overflow: hidden;
 	margin: 0;
 	padding: 5px;
 	color: brown;
