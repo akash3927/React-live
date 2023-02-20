@@ -1,6 +1,6 @@
 /** @format */
 
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 
 const Title = () => (
@@ -12,6 +12,8 @@ const Title = () => (
 );
 
 const Header = () => {
+	const [isLoggedIn, setIsLoggedIn] = useState(false);
+
 	return (
 		<div className='header'>
 			<Title />
@@ -23,6 +25,15 @@ const Header = () => {
 					<li>Cart</li>
 				</ul>
 			</div>
+			{isLoggedIn ? (
+				<button className='log-btn' onClick={() => setIsLoggedIn(false)}>
+					Logout
+				</button>
+			) : (
+				<button className='log-btn' onClick={() => setIsLoggedIn(true)}>
+					Login
+				</button>
+			)}
 		</div>
 	);
 };

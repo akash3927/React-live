@@ -20,12 +20,28 @@ body {
 .nav-items > ul {
 	list-style-type: none;
 	display: flex;
+	margin-left: 670px;
 }
 .nav-items > ul > li {
 	padding: 10px;
 	background-color: transparent;
 	color: brown;
 	font-weight: 900;
+	font-size: 17px;
+	margin-right: 60px;
+}
+.log-btn {
+	background-color: transparent;
+	border: none;
+	outline: none;
+	padding: 10px;
+	background-color: transparent;
+	color: brown;
+	font-weight: 600;
+	font-size: 18px;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+		'Lucida Sans', Arial, sans-serif;
+	margin-bottom: 10px;
 }
 
 .logo {
