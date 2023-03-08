@@ -16,19 +16,25 @@ body {
 	position: sticky;
 	top: 0;
 }
+.nav-items {
+	display: flex;
+}
 
 .nav-items > ul {
 	list-style-type: none;
 	display: flex;
-	margin-left: 670px;
+	justify-content: center;
+	align-items: center;
+	margin-right: 80px;
 }
-.nav-items > ul > li {
+.nav-items > ul > .menu-li > a {
 	padding: 10px;
 	background-color: transparent;
 	color: brown;
 	font-weight: 900;
 	font-size: 17px;
 	margin-right: 60px;
+	text-decoration: none;
 }
 .log-btn {
 	background-color: transparent;
@@ -41,7 +47,6 @@ body {
 	font-size: 18px;
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
 		'Lucida Sans', Arial, sans-serif;
-	margin-bottom: 10px;
 }
 
 .logo {
@@ -110,4 +115,53 @@ body {
 	justify-content: center;
 	grid-template-columns: 20% 20% 20% 20%;
 	gap: 30px;
+}
+
+.restaurant-shimmer {
+	width: 100%;
+	margin: auto;
+	display: grid;
+	justify-content: center;
+	grid-template-columns: 20% 20% 20% 20%;
+	gap: 30px;
+}
+.shimmer-card {
+	width: 250px;
+	height: 330px;
+	margin: 10px;
+	padding: 10px;
+	background-color: lightgray;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.shimmer-card > .shimmer-img {
+	width: 200px;
+	height: 200px;
+	background-color: darkgray;
+	width: 100%;
+	margin-bottom: 30px;
+	height: 100%;
+}
+.shimmer-card > .shimmer-name {
+	background-color: darkgray;
+	height: 15px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	width: 100%;
+}
+.shimmer-card > .shimmer-cuisines {
+	background-color: darkgray;
+	height: 15px;
+	border-radius: 10px;
+	width: 100%;
+}
+.shimmer-card > .shimmer-specifications {
+	background-color: darkgray;
+	height: 15px;
+	border-radius: 10px;
+	width: 100%;
+	margin-top: 20px;
 }

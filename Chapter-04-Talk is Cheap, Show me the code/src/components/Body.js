@@ -10,6 +10,7 @@ function filterData(searchText, restaurants) {
 	const filterData = restaurants.filter((restaurant) =>
 		restaurant?.data?.name?.toLowerCase()?.includes(searchText.toLowerCase()),
 	);
+
 	return filterData;
 }
 
@@ -23,17 +24,21 @@ const Body = () => {
 	}, []);
 
 	async function getRestaurants() {
-		const data = await fetch(
-			'https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.5204303&lng=73.8567437&page_type=DESKTOP_WEB_LISTING',
-		);
-		const json = await data.json();
-		console.log(json);
-		setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-		setFilterdRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+		try {
+			const data = await fetch(
+				'https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.5204303&lng=73.8567437&page_type=DESKTOP_WEB_LISTING',
+			);
+			const json = await data.json();
+			console.log(json);
+			setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+			setFilterdRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+		} catch (error) {
+			console.log(error);
+		}
 	}
 
 	if (!allRestaurants) return null;
-	if (filterdRestaurants?.length === 0) return <h1>No Matches Found 😔</h1>;
+	// if (filterdRestaurants?.length === 0) return <h1>No Matches Found 😔</h1>;
 
 	return allRestaurants.length === 0 ? (
 		<ShimmerUi />
