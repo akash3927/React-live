@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom/client';
 import { restaurantList } from '../../config';
 import RestaurantCard from './RestaurantCard';
 import ShimmerUi from './ShimmerUi';
-
+import { Link } from 'react-router-dom';
 function filterData(searchText, restaurants) {
 	const filterData = restaurants.filter((restaurant) =>
 		restaurant?.data?.name?.toLowerCase()?.includes(searchText.toLowerCase()),
@@ -68,7 +68,11 @@ const Body = () => {
 			<div className='restaurant-List'>
 				{filterdRestaurants.map((restaurant) => {
 					return (
-						<RestaurantCard {...restaurant.data} key={restaurant.data.id} />
+						<Link
+							to={'/restaurant/' + restaurant.data.id}
+							key={restaurant.data.id}>
+							<RestaurantCard {...restaurant.data} />
+						</Link>
 					);
 				})}
 			</div>
