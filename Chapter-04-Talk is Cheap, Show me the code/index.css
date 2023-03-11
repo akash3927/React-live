@@ -79,6 +79,10 @@ body {
 	border-bottom: #2c5142 1px solid;
 }
 
+.restaurant-List a {
+	text-decoration: none;
+}
+
 .card {
 	width: 250px;
 	height: 330px;
