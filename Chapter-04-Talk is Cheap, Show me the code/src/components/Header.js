@@ -5,11 +5,13 @@ import ReactDOM from 'react-dom/client';
 import { Link } from 'react-router-dom';
 
 const Title = () => (
-	<img
-		className='logo'
-		src='https://static.takeaway.com/images/restaurants/fr/RRPR5PR1/logo_465x320.png'
-		alt='logo'
-	/>
+	<Link to='/'>
+		<img
+			className='logo'
+			src='https://static.takeaway.com/images/restaurants/fr/RRPR5PR1/logo_465x320.png'
+			alt='logo'
+		/>
+	</Link>
 );
 
 const Header = () => {
