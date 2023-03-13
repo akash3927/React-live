@@ -1,13 +1,20 @@
 Assignments:
 1.When and why do we need lazy?
+=>Lazy loading (also called on-demand loading) is an optimization technique for the online content, be it a website or a web app.
+Instead of loading the entire web page and rendering it to the user in one go as in bulk loading, 
+the concept of lazy loading assists in loading only the required section and delays the remaining, until it is needed by the user.
 2.What is suspence?
+=>While a lazy-loaded component is being loaded, you may want to display a fallback component to the user. 
+ This is where the Suspense component comes in. Suspense allows you to specify a fallback component to render while a lazy-loaded component is loading.
+
 3.Why we got this error: A Component suspended while responding to synchronus
   this will cause the UI to be replaced with a loading indicator. To fix
   updates that suspend should be wrapped with startTransition? How does suspense
   fix this error
 4.Advantages and disadvatages using this code splitting pattern ?
 5.when do we need and why do we need suspense ?
-
+=>While a lazy-loaded component is being loaded, you may want to display a fallback component to the user. 
+ This is where the Suspense component comes in. Suspense allows you to specify a fallback component to render while a lazy-loaded component is loading.
 
 Notes:
 
