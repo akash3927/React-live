@@ -1,0 +1,39 @@
+Assignments:
+1.When and why do we need lazy?
+2.What is suspence?
+3.Why we got this error: A Component suspended while responding to synchronus
+  this will cause the UI to be replaced with a loading indicator. To fix
+  updates that suspend should be wrapped with startTransition? How does suspense
+  fix this error
+4.Advantages and disadvatages using this code splitting pattern ?
+5.when do we need and why do we need suspense ?
+
+
+Notes:
+
+1.why hooks imp ?
+
+1.Redeability
+2.Reusibility
+3.Modularity==>breaken down in meaningful pieces
+4.maintainable
+5.testable
+
+
+Custom Hooks ?
+
+1.Hooks are like normal function we use hooks to export some logic into that 
+function
+
+
+2.
+=chunking
+=code splitting
+=lazy loading
+=on demand loading
+=Dynamic import
+
+lazy loading should always be on the top
+
+
+

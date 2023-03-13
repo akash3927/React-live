@@ -34,6 +34,9 @@ const Header = () => {
 					<li className='menu-li'>
 						<Link>Cart</Link>
 					</li>
+					<li className='menu-li'>
+						<Link to='/instamart'>instaMart</Link>
+					</li>
 					{isLoggedIn ? (
 						<button className='log-btn' onClick={() => setIsLoggedIn(false)}>
 							Logout
