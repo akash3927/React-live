@@ -1,4 +1,8 @@
 Notes:-
+
+**
+
+
 1.Class Based Componet :-
 
 class Profile extends React.component {
@@ -35,7 +39,7 @@ const Profile=()=>{
   )
 }
 
-6.we do not mutate state directly
+6.we do not mutate state directly //we never do this.state
 *react life cycle
 7.constructor then render  
 8.componenetdidmount =>this is the fucntion after render it will
@@ -43,11 +47,54 @@ const Profile=()=>{
   sequence (constructor, render, componentdidmount)
   we are making api calls in componentdidmount
 
+ex.class Profile extends React.component {
+   constructor(props){
+       super(props)
+         this.state = {
+           count: 0
+	 }
+	console.log(parent-constructor)
+}
+componentDidMount(){
+ console.log("parent-componentDidMount")
+}
+componentDidUpdate(){
+	console.log(componentDidUpdate)
+}
+componentWillUnmount
+	console.log(componentWillUnmount)
+}
+   render(){
+console.log(parent-render)
+	return(
+	   <h1>Hello world</h1>
+    }
+  )
+}
 
+sequence: of execution
+parent-constructor
+parent render
+child-constructor 
+child-render
+child-componentDidMount
+child-componentDidMount
+
+
+9.we can make async function to componentDidMount
+
+10.componentWillUnmount is helps to clean to setinterval
+11.setInterval is used then there should be closeInterval
 
 mounting
 render phase--constructor called, render called (fast phase)
 commit phase--react is modifying dom componentDidMount called (slow)
+
+
+
+
+about react life cycle workin
+--react first complete render cycle phase and then it goes to commit phase
 
 
 
