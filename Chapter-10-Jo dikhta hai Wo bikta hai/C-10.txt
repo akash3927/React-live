@@ -1,0 +1,17 @@
+Notes:-
+Assignments:-
+1.Explore all the ways of writing css
+=>1.inline 
+  2.outside
+2.How do we configure tailwind ?
+=>1.install tailwind,postcss
+
+
+3.In tailwind.config.js what does all the keys mean (content, theme extend plugins)
+4.why do we have .postcssrs file ?
+=>let the parcel know that why we are using bundling the things and everything
+
+
+
+extnesion
+tailwind css intellisence
