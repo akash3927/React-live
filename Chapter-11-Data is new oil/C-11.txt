@@ -11,5 +11,20 @@ Assignments:-
  and it’s one of the most common things you will do writing React code.
 
 3.What is context provider and context consumer?
-=>
+=>usercontext.consumer is used to get data in class component
+  userContext.provider is can override default value of context
+   
 4.if you don't pass a value to the provider does it take without value ?
+=>yes
+
+
+-import createContext
+-create UserContext variable add value as object in that var
+-export it
+
+how to use it ?
+- just import in another component as useUsecontext
+-u can always have multiple context
+-in usecontext mention your created context
+-
+
