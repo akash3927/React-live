@@ -26,5 +26,6 @@ how to use it ?
 - just import in another component as useUsecontext
 -u can always have multiple context
 -in usecontext mention your created context
--
+-we can also give name to userContext
+
 

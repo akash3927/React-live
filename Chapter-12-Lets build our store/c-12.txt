@@ -1,3 +1,8 @@
+-redux is used to manage or data layer
+-redux store is just like a big object
+
+
+
 Notes:-
 1.Difference between redux and redux toolkit?
 2.redux store is big object eod , it has different section
@@ -15,6 +20,144 @@ selector is use to read the data
   export default store;
 
 
+sample slice
+
+
+const cartSlice = createSlice({
+	name: "cart",
+	initialState: {
+		items: ["Banana", "Apples"],
+
+  },
+reducers: {
+    addItem: (state,action)=>{
+      state.items.push(action.payload)
+   }
+    removeItem: (state,action){
+      state.items.pop()
+   }
+     clearCart(state)=>{
+      state.items = []
+   }
+  }
+})
+
+export const { addItem, removeItem, clearCart} = cartSlice.actions
+
+export default cartSice.reducer
+
 9.provider is used from react-redux
 10.slice is created using createslice,it has name, initial state
 11.useselector is use to subscribe to the store
+
+
++------->dispatching a action---->calls reducer & update our redux slice---->and then the selector is used to read the data.
+
+ 
+
+process to configure to our redux toolkit
+
+//
+create store
+   configure store
+provide my store to app
+    <provider store={store}>--import from react-redux
+slice
+--createSlice({
+  name:"",
+  InitialState: 
+  reducers:{
+    addItem;{
+      addItem: (state, action)=>{action.payload}
+    }
+ 
+  }
+})
+
+
+export const (addItem, createItem, removeItem ) = cartSlice.actions
+export default cartSlice.reducer
+
+
+put that slice into store
+{
+  reducer:{
+      cart: cartSlice
+       
+   }
+  
+}
+//
+
+
+
+
+Assignments
+1.useContext vs Redux
+=> useContext 
+
+Redux
+
+-useContext is a hook.  	               -Redux is a state management library.
+-It is used to share data.	               -It is used to manage data and state.
+-Changes are made with the Context value.	-Changes are made with pure functions i.e. reducers.
+-We can change the state in it.	        -The state is read-only. We cannot change them directly.
+-It re-renders all components whenever there
+  is any update in the provider’s value prop.
+-It is better to use with small applications.	-It is perfect for larger applications. 
+-It is easy to understand and requires less code.	-It is quite complex to understand.
+
+
+2.Advantage of using Redux Toolkit over Redux
+=>Redux Toolkit resolves the issues detected in Redux, namely:
+-Configuring a Redux store (where the entire state tree of the application is held) becomes too complicated.
+-To use Redux we need to add a lot of additional packages which can be quite a headache for beginners.
+-Redux requires too much boilerplate code.
+-Cloning before updating the state. In Redux Toolkit, there’s no need to install any additional packages.
+
+3.Explain dispatcher
+=>In react-redux the useDispatch hook gives us access to our store's dispatch method.
+  Dispatch is used to send actions into our redux store and is the only way we can affect the store from within a component.
+ const dispatch = useAppDispatch ();
+ dispatch ({ type: "featureName/actionName, payload: {} })
+
+4.Explaing Reducer
+=>Reducers are functions that take the current state and an action as arguments, 
+  and return a new state result. In other words, (state, action) => newState. A Redux app really only has one reducer function:
+ the "root reducer" function that you will pass to createStore later on.
+
+5.Explaing Slice
+=> A function that accepts an initial state, an object of reducer functions,
+  and a "slice name", and automatically generates action creators and action types that correspond to the reducers and state.
+
+
+6.Explaing createSlice the Configuiration it takes
+=>initialState
+The initial state value for this slice of state.
+This may also be a "lazy initializer" function, which should return an initial state value when called.
+This will be used whenever the reducer is called with undefined as its state value, and is primarily useful for cases like reading initial state from localStorage.
+name
+A string name for this slice of state. Generated action type constants will use this as a prefix.
+reducers
+An object containing Redux "case reducer" functions (functions intended to handle a specific action type,
+ equivalent to a single case statement in a switch).
+The keys in the object will be used to generate string action type constants,
+ and these will show up in the Redux DevTools Extension when they are dispatched. 
+Also, if any other part of the application happens to dispatch an action with the exact same type string,
+ the corresponding reducer will be run. Therefore, you should give the functions descriptive names.
+This object will be passed to createReducer, so the reducers may safely "mutate" the state they are given.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
