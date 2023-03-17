@@ -13,17 +13,22 @@ import Error from './components/Error';
 import Contact from './components/Contact';
 import RestaurantMenu from './components/RestaurantMenu';
 import ShimmerUi from './components/ShimmerUi';
+import { Provider } from 'react-redux';
 // import Instamart from './components/instaMart';
+import store from './utils/store';
+import Cart from './components/Cart';
 
 const Instamart = lazy(() => import('./components/Instamart'));
 
 const AppLayout = () => {
 	return (
 		<>
-			<Header />
-			{/* <Body /> */}
-			<Outlet />
-			<Footer />
+			<Provider store={store}>
+				<Header />
+				{/* <Body /> */}
+				<Outlet />
+				<Footer />
+			</Provider>
 		</>
 	);
 };
@@ -49,6 +54,10 @@ const appRouter = createBrowserRouter([
 			{
 				path: '/restaurant/:resId',
 				element: <RestaurantMenu />,
+			},
+			{
+				path: '/cart',
+				element: <Cart />,
 			},
 			{
 				path: '/instamart',

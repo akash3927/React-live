@@ -1,8 +1,10 @@
 /** @format */
 import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 import { useParams } from 'react-router-dom';
 import { FETCH_MENU_URL, IMG_CDN_URL } from '../../config';
+import { addItem } from '../utils/cartSlice';
 // import useRestaurant from '../utils/useRestaurant';
 import ShimmerUi from './ShimmerUi';
 
@@ -36,21 +38,51 @@ const RestaurantMenu = () => {
 		// 	// const resImg =
 		// 	// 	IMG_CDN_URL + json?.data?.cards[0]?.card?.card?.info?.cloudinaryImageId;
 	}
+	const dispatch = useDispatch();
+	const addFoodItem = (item) => {
+		dispatch(addItem(item));
+	};
 
 	return !restaurant ? (
 		<ShimmerUi />
 	) : (
-		<div>
-			<h1>{restaurant.name}</h1>
-			<img src={IMG_CDN_URL + restaurant.cloudinaryImageId} />
-			<div>
-				<ul>
-					{items?.itemCards?.map((item) => (
-						<li>{item?.card?.info?.name}</li>
-					))}
-				</ul>
+		<>
+			<div className='menu-card'>
+				<div className='restrau-details'>
+					<h1>{restaurant.name}</h1>
+					<h1>{restaurant.city + ',' + restaurant.locality}</h1>
+					<h1>{restaurant.avgRating}⭐</h1>
+					<h1>{restaurant.totalRatingsString}</h1>
+				</div>
+				<img
+					className='restrau-image'
+					src={IMG_CDN_URL + restaurant.cloudinaryImageId}
+				/>
 			</div>
-		</div>
+			<div className='itemcard'>
+				{items?.itemCards?.map((item) => (
+					<>
+						<div className='itembox'>
+							<div className='item-details'>
+								<h1>{item?.card?.info?.name}</h1>
+								<h1>{item?.card?.info?.category}</h1>
+								<h1>Rs.{item?.card?.info?.price / 100 + '.00'}</h1>
+								<p>{item?.card?.info?.description}</p>
+							</div>
+							<div className='itemimg'>
+								<img
+									className='item-img'
+									src={IMG_CDN_URL + item?.card?.info?.imageId}
+								/>
+								<button onClick={() => addFoodItem(item)} className='item-btn'>
+									ADD
+								</button>
+							</div>
+						</div>
+					</>
+				))}
+			</div>
+		</>
 	);
 };
 

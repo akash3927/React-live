@@ -2,7 +2,9 @@
 
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import store from '../utils/store';
 
 const Title = () => (
 	<Link to='/'>
@@ -16,7 +18,8 @@ const Title = () => (
 
 const Header = () => {
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+	const cartItems = useSelector((store) => store.cart.items);
+	console.log(cartItems);
 	return (
 		<div className='header'>
 			<Title />
@@ -32,7 +35,7 @@ const Header = () => {
 						<Link to='/contact'>Contact</Link>
 					</li>
 					<li className='menu-li'>
-						<Link>Cart</Link>
+						<Link to='/cart'>Cart -{cartItems.length}</Link>
 					</li>
 					<li className='menu-li'>
 						<Link to='/instamart'>instaMart</Link>
