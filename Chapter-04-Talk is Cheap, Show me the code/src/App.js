@@ -17,6 +17,7 @@ import { Provider } from 'react-redux';
 // import Instamart from './components/instaMart';
 import store from './utils/store';
 import Cart from './components/Cart';
+import Login from './components/Login';
 
 const Instamart = lazy(() => import('./components/Instamart'));
 
@@ -68,6 +69,10 @@ const appRouter = createBrowserRouter([
 				),
 			},
 		],
+	},
+	{
+		path: '/login',
+		element: <Login />,
 	},
 ]);
 

@@ -2,8 +2,8 @@
 
 const Instamart = () => {
 	return (
-		<div>
-			<h1>this is lazy loading</h1>
+		<div className='instamart'>
+			<h1>this is lazy loading...</h1>
 		</div>
 	);
 };

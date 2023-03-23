@@ -51,7 +51,7 @@ const RestaurantMenu = () => {
 				<div className='restrau-details'>
 					<h1>{restaurant.name}</h1>
 					<h1>{restaurant.city + ',' + restaurant.locality}</h1>
-					<h1>{restaurant.avgRating}⭐</h1>
+					<h1 className>{restaurant.avgRating}⭐</h1>
 					<h1>{restaurant.totalRatingsString}</h1>
 				</div>
 				<img
